@@ -50,16 +50,12 @@
 		  { data :'Battery Voltage' },
 		{ data :'Battery mAh' },
 		{ data : 'Dry Weight (g)'},
-		{ data :'Source' }
+		{ data :'Source', "render": function ( data, type, row, meta ) {
+      			return '<a href="'+data+'">data</a>';
+    			} 
+		}
 		
-        ],
-	    columnDefs": [ {
-    "targets": 0,
-    "data": "Source",
-    "render": function ( data, type, row, meta ) {
-      return '<a href="'+data+'">data</a>';
-    }
-  } ]
+        ]
     });
 		
 });
