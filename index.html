@@ -16,11 +16,12 @@
 		<tr>
 		<th>model</th>
 		<th>class</th>
-		<th>propdiameter</th>
-		<th>motorsize</th>
-		<th>motorkv</th>
-		<th>batteryvoltage</th>
-		<th>batterymah</th>
+		<th>prop diameter</th>
+		<th>motor size</th>
+		<th>motor kv</th>
+		<th>battery voltage</th>
+		<th>battery mah</th>
+		<th>dry weight (g)</th>	
 		<th>source</th>
 		</tr>
 	</thead>
@@ -33,17 +34,18 @@
     	//console.log(data);	
     $('#example').DataTable({
         ajax: {
-		url : "https://raw.githubusercontent.com/ascendr/motors_and_props/main/test.json"
+		url : "https://raw.githubusercontent.com/ascendr/motors_and_props/main/MotorandPropData.json"
 	},
         columns: [
-            { data: 'model' },
-            { data: 'class' },
-		{ data : 'propdiameter'},
-		{ data :'motorsize' },
-		 { data :'motorkv' },
-		  { data :'batteryvoltage' },
-		{ data :'batterymah' },
-		{ data :'source' }
+            { data: 'Model' },
+            { data: 'Class' },
+		{ data : 'Prop diameter'},
+		{ data :'Motor size' },
+		 { data :'Motor kv' },
+		  { data :'Battery Voltage' },
+		{ data :'Battery mAh' },
+		{ data : 'Dry Weight (g)'},
+		{ data :'Source' }
 		
         ]
     });
