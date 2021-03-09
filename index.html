@@ -52,7 +52,14 @@
 		{ data : 'Dry Weight (g)'},
 		{ data :'Source' }
 		
-        ]
+        ],
+	    columnDefs": [ {
+    "targets": 0,
+    "data": "Source",
+    "render": function ( data, type, row, meta ) {
+      return '<a href="'+data+'">data</a>';
+    }
+  } ]
     });
 		
 });
