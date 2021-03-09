@@ -27,10 +27,12 @@
 </body>
  <script>
   $(document).ready(function(){
-    	var data = $.getJSON( "https://raw.githubusercontent.com/ascendr/motors_and_props/main/test.json")
-    	console.log(data);	
+    	//var data = $.getJSON( "https://raw.githubusercontent.com/ascendr/motors_and_props/main/test.json")
+    	//console.log(data);	
     $('#example').DataTable({
-        "ajax": data,
+        ajax: {
+		url : "https://raw.githubusercontent.com/ascendr/motors_and_props/main/test.json"
+	},
         columns: [
             { data: 'model' },
             { data: 'class' },
