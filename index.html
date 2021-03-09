@@ -11,28 +11,26 @@
 </head>
 <body>
 
-<table id="example" class="table table-bordered" width="100%">
+<table id="data" class="table table-strpied table-bordered" width="100%">
 	<thead>
 		<tr>
-		<th>model</th>
-		<th>class</th>
-		<th>prop diameter</th>
-		<th>motor size</th>
-		<th>motor kv</th>
-		<th>battery voltage</th>
-		<th>battery mah</th>
-		<th>dry weight (g)</th>	
-		<th>source</th>
+		<th>Model</th>
+		<th>Class</th>
+		<th>Prop Diameter</th>
+		<th>Motor Size</th>
+		<th>Motor KV</th>
+		<th>Battery Voltage</th>
+		<th>Battery mAh</th>
+		<th>Dry Weight (g)</th>	
+		<th>Source</th>
 		</tr>
 	</thead>
 </table>
 
 </body>
  <script>
-  $(document).ready(function(){
-    	//var data = $.getJSON( "https://raw.githubusercontent.com/ascendr/motors_and_props/main/test.json")
-    	//console.log(data);	
-    $('#example').DataTable({
+  $(document).ready(function(){	
+    $('#data').DataTable({
         ajax: {
 		url : "https://raw.githubusercontent.com/ascendr/motors_and_props/main/MotorandPropData.json"
 	},
