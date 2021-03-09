@@ -26,10 +26,14 @@
   $(document).ready(function(){
     var jsonData = [{"userID":"1","userName":"name1"},{"userID":"2","userName":"name2"},{"userID":"3","userName":"name3"}];
     $('#example').dataTable({
-        data: jsonData,
+        "ajax": {
+  	"url": "https://github.com/ascendr/motors_and_props/blob/main/motors_props.json"
+  	},
         columns: [
-            { data: 'userID' },
-            { data: 'userName' }
+		{ data: 'id' },
+            { data: 'tile' },
+            { data: 'content' }
+		
         ]
     });
 });
