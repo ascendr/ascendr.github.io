@@ -24,7 +24,7 @@
 </body>
  <script>
   $(document).ready(function(){
-    $('#example').dataTable({
+    var table = $('#example').dataTable({
         "ajax": {
   	"url": "https://github.com/ascendr/motors_and_props/blob/main/motors_props2.json"
   	},
@@ -41,5 +41,6 @@
         ]
     });
 });
+table.ajax.url( 'https://github.com/ascendr/motors_and_props/blob/main/motors_props2.json' ).load();
 </script>
 </html>
