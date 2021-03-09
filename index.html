@@ -1,25 +1,37 @@
-<html> 
-  <head>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-sortable/0.9.13/jquery-sortable.js"></script>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>FPV Motor Selection</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
 </head>
-  <table>
-    <tbody>
-        <tr> 
-            <td>1</td>
-            <td>2</td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>4</td> 
-        </tr>
-        <tr>
-            <td>5</td>
-            <td>6</td>
-        </tr>  
-    </tbody>    
-</table>​
+<body>
 
-<script>
-    $('tbody').sortable();
-</script> 
+<table cellpadding="0" cellspacing="0" border="0" class="display" id="example" align="center">
+	<thead>
+		<tr>
+			<th>UserID</th>
+			<th>userName</th>
+		</tr>
+	</thead>
+	<tbody>
+
+	</tbody>
+</table>
+
+</body>
+ <script>
+  $(document).ready(function(){
+    var jsonData = [{"userID":"1","userName":"name1"},{"userID":"2","userName":"name2"},{"userID":"3","userName":"name3"}];
+    $('#example').dataTable({
+        data: jsonData,
+        columns: [
+            { data: 'userID' },
+            { data: 'userName' }
+        ]
+    });
+});
+</script>
 </html>
