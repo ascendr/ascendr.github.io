@@ -30,7 +30,7 @@
     	var data = $.getJSON( "https://raw.githubusercontent.com/ascendr/motors_and_props/main/test.json")
     	console.log(data);	
     $('#example').DataTable({
-        "data": data,
+        "ajax": data,
         columns: [
             { data: 'model' },
             { data: 'class' },
